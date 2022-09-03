@@ -33,3 +33,6 @@ compileTestKotlin {
 application {
     mainClassName = 'MainKt'
 }
+
+task stage(dependsOn: ['build', 'clean'])
+build.mustRunAfter clean
